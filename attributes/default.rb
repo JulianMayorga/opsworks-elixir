@@ -6,8 +6,7 @@ default[:opsworks_elixir] = {
     },
     install: {
       packages: [
-        "erlang",
-        "erlang-base-hipe",
+        "esl-erlang",
         "elixir"
       ]
     }
