@@ -2,6 +2,8 @@ log "[#{cookbook_name}][#{recipe_name}] Running ..."
 
 case node[:platform_family]
 when "ubuntu","debian"
+  include_recipe "nodejs"
+
   elixir_setup = node[:opsworks_elixir][:setup]
   esl_package  = "#{Chef::Config[:file_cache_path]}/#{elixir_setup[:package][:file]}"
 
